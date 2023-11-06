@@ -1,0 +1,36 @@
+print("Calculator for Fixed Bias Configuration")
+print("1.Base-Current\n2.Base-Resistance\n3.Collector-Voltage\n4.Collector-Emitter Voltage\n5.Collector- Current\n6.Collector-Resistance")
+a=input("What value do you wish to calculate from the Above options(Serial Number)?\n")
+if a== "1":
+  vcc=input("What is the value of Collector-Voltage? ")
+  rb=input("What is the value of Base-Resistance? ")
+  i=(float(vcc)-0.7)/float(rb)
+  print("The Base Current is" + " " + str(i) + " " + "Amperes.")
+elif a== "2":
+  vcc=input("What is the value of Collector-Voltage? ")
+  ib=input("What is the value of Base-Current? ")
+  r=(float(vcc)-0.7)/float(ib)
+  print("The Base Resistance is" + " " + str(r) + " " + "Ohms.")
+elif a== "3":
+  rb=input("What is the value of Base Resistance? ")
+  ib=input("What is the value of Base-Current? ")
+  v=(float(ib)*float(rb)+(0.7))
+  print("The Collector Voltage is" + " " + str(v) + " " + "Volts.")
+elif a== "4":
+  vcc=input("What is the value of Collector Voltage? ")
+  ic=input("What is the value of Collector Current? ")
+  rc=input("What is the value of Collector Resistance? ")
+  v=(float(vcc)-(float(ic)*float(rc)))
+  print("The Collector Emitter Voltage is" + " " + str(v) + " " + "Volts.")
+elif a== "5":
+  vcc=input("What is the value of Collector Voltage? ")
+  vce=input("What is the value of Collector Emitter Voltage? ")
+  rc=input("What is the value of Collector Resistance? ")
+  i=((float(vcc)-float(vce))/float(rc))
+  print("The Collector Current is" + " " + str(i) + " " + "Amperes.")
+elif a== "6":
+  vcc=input("What is the value of Collector Voltage? ")
+  vce=input("What is the value of Collector Emitter Voltage? ")
+  ic=input("What is the value of Collector Current? ")
+  r=((float(vcc)-float(vce))/float(ic))
+  print("The Collector Resistance is" + " " + str(r) + " " + "Ohms.")
